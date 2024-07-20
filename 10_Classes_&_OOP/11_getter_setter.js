@@ -11,7 +11,7 @@ class User {
     set email(value){
         this._email = value
     }
-
+ 
     get password(){
         return `${this._password}Punit`
     }
