@@ -239,3 +239,147 @@ const stopChangingColor = function () {
 document.querySelector('#start').addEventListener('click', startChangingColor);
 
 document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+```
+
+## Project 9
+
+```javascript
+const cursor = document.querySelector('.cursor');
+// an array of 10 colors in hex value
+const colors = [
+  '#FF6633',
+  '#FFB399',
+  '#FF33FF',
+  '#FFFF99',
+  '#00B3E6',
+  '#E6B333',
+  '#3366E6',
+  '#999966',
+  '#99FF99',
+  '#B34D4D',
+];
+// add circle to cursor and change it's color as cursor moves on the screen. Pick color from these array
+document.addEventListener('mousemove', function (event) {
+  moveCursor(event.pageX, event.pageY);
+});
+
+const moveCursor = function (pageX, pageY) {
+  cursor.style.left = pageX + 'px';
+  cursor.style.top = pageY + 'px';
+
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+  cursor.style.backgroundColor = randomColor;
+};
+
+
+```
+
+## Project 10
+
+```javascript
+const btn = document.querySelector('#emoji');
+const emojis = [
+  '😆',
+  '😅',
+  '🤣',
+  '😂',
+  '😀',
+  '🤑',
+  '🤨',
+  '🙂',
+  '😊',
+  '😗',
+  '😛',
+  '😏',
+  '🤥',
+  '😴',
+  '🥺',
+  '😧',
+  '😇',
+  '😳',
+  '🙃',
+  '🥴',
+  '🧐',
+  '🤨',
+  '😒',
+  '🤔',
+  '🤭',
+  '🥰',
+  '🤐',
+  '👀',
+  '🤔',
+  '🤪',
+  '🥲',
+  '😃',
+  '😁',
+  '😬',
+];
+
+
+```
+
+## Project 12
+
+```javascript
+const baseURL = 'https://source.unsplash.com/all/';
+
+// this url gives an image. Use this and NO API calls
+const container = document.querySelector('.content');
+
+const rows = 7;
+
+for (let i = 0; i < rows * 3; i++) {
+  const img = document.createElement('img');
+  img.src = `${baseURL}${randomSize()}`;
+  // console.log(img.src)
+  container.appendChild(img);
+}
+
+function randomSize() {
+  return `${randomNumber()}x${randomNumber()}`;
+}
+
+function randomNumber() {
+  return Math.floor(Math.random() * 10) + 300;
+}
+
+
+```
+
+## Project 13
+
+```javascript
+const url = 'https://api.chucknorris.io/jokes/random';
+
+// handle this end point with XMLHttpRequest
+
+// handle this end point with promises
+
+// handle the case of race condition
+
+
+```
+
+## Project 14
+
+```javascript
+const url = 'https://api.thecatapi.com/v1/images/search';
+
+
+```
+
+## Project 15
+
+```javascript
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const year = document.getElementById('year');
+const bookList = document.getElementById('book-list');
+const btn = document.querySelector('.btn');
+
+btn.addEventListener('click', function (e) {
+  //work on CRUD operation of DOM
+});
